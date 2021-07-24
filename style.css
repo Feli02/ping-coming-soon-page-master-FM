@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue-primary: hsl(223, 87%, 63%);
+    --pale-blue-secondary: hsl(223, 100%, 88%);
+    --light-red-secondary: hsl(354, 100%, 66%);
+    --gray-neutral: hsl(0, 0%, 59%);
+    --very-dark-blue-neutral: hsl(209, 33%, 12%);
+}
+
+body, html{
+    font-family: 'Libre Franklin', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20% 8% 0 8%;
+}
+
+.logo{
+    width: 20%;
+    margin-bottom: 45px;
+}
+
+.main-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--very-dark-blue-neutral);
+    margin-bottom: 20px;
+}
+
+span.inside-title{
+    font-weight: 300;
+    color: var(--gray-neutral);
+}
+
+.suscribe{
+    color: var(--very-dark-blue-neutral);
+    margin-bottom: 30px;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 380px;
+}
+
+#email, .btn-notifyMe{
+    height: 3rem;
+    border-radius: 60px;
+    outline: none;
+}
+
+#email{
+    margin-bottom: 10px;
+    border: solid 1px var(--pale-blue-secondary);
+    padding-left: 25px;
+    transition: border 0.2s;
+}
+
+#email::placeholder{
+    color: var(--gray-neutral);
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 80%;
+}
+
+#error-msg{
+    color: var(--light-red-secondary);
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.btn-notifyMe{
+    background: var(--blue-primary);
+    border: none;
+    color: white;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    box-shadow: 0px 5px 10px 2px rgb(76 123 243 / 23%);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-notifyMe:hover{
+    opacity: 80%;
+    transition: opacity 0.2s;
+}
+
+.illustration{
+    width: 100%;
+}
+
+#facebook svg {
+    fill: var(--blue-primary);
+    border: 1px solid rgba(76, 123, 243, 0.15);
+    border-radius: 100%;
+    width: 32px;
+    height: 31px;
+    padding: 0px;
+    transition: all 0.2s;
+}
+  
+#twitter svg {
+    fill: var(--blue-primary);
+    border: 1px solid rgba(76, 123, 243, 0.15);
+    border-radius: 100%;
+    width: 32px;
+    height: 31px;
+    padding: 7px;
+    transition: all 0.2s;
+}
+  
+#instagram svg {
+    fill: var(--blue-primary);
+    border: 1px solid rgba(76, 123, 243, 0.15);
+    border-radius: 100%;
+    width: 32px;
+    height: 31px;
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+
+#instagram svg:hover,
+#facebook svg:hover,
+#twitter svg:hover {
+  fill: white;
+  border: 1px solid var(--blue-primary);
+  background-color: var(--blue-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#social-container{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+#container-media-copyright{
+    margin-bottom: 60px;
+}
+
+.copyright{
+    color: var(--gray-neutral);
+    text-align: center;
+}
+
+#email:focus{
+    border: solid 1px var(--blue-primary);
+    transition: border 0.2s;
+}
+
+
+.attribution{
+    width: 100%;
+    line-height: 30px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.attribution a{
+    text-decoration: underline wavy #00b4d8;
+    color: #00b4d8;
+    transition: all 0.3s
+}
+
+.attribution a:hover{
+    transition: all, 0.3s ;
+    color: #f72585;
+    text-decoration: underline wavy #f72585;
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px){
+    main{
+        margin: 15% 8% 0 8%;
+    }
+    .main-title{
+        font-size: 30px;
+    }
+    .suscribe{
+        font-size: 20px;
+    }
+    .main-form{
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        height: 100px;
+        margin-bottom: 30px;
+        max-width: none;
+    }
+    #email{
+        width: 70%;
+    }
+    .btn-notifyMe{
+        width: 25%;
+    }
+    #error-msg{
+        position: absolute;
+        bottom: 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    main{
+        margin: 10% 15% 0 15%;
+    }
+    .main-title{
+        font-size: 30px;
+    }
+    .suscribe{
+        font-size: 20px;
+    }
+    .main-form{
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        height: 100px;
+        margin-bottom: 30px;
+        max-width: 675px;
+    }
+    #email{
+        width: 70%;
+    }
+    .btn-notifyMe{
+        width: 25%;
+    }
+    #error-msg{
+        position: absolute;
+        bottom: 0;
+        font-size: 16px;
+    }
+    .illustration{
+        margin-bottom: 40px;
+    }
+}
