@@ -226,11 +226,14 @@ span.inside-title{
     main{
         margin: 10% 15% 0 15%;
     }
+    .logo{
+        width: 15%;
+    }
     .main-title{
-        font-size: 30px;
+        font-size: 50px;
     }
     .suscribe{
-        font-size: 20px;
+        font-size: 25px;
     }
     .main-form{
         flex-direction: row;
@@ -253,5 +256,8 @@ span.inside-title{
     }
     .illustration{
         margin-bottom: 40px;
+    }
+    #social-container{
+        width: 30%;
     }
 }
